@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sleep 5
+
+for i in {1..99999}
+do
+  if [[ $((i % 200)) = 0 ]] ; then xdotool mousedown 3 && sleep 2 && xdotool mouseup 3 ; 
+  else xdotool click 1 ; fi
+  sleep 1.5;
+  echo "Cовершено $i нажатий.";
+done
